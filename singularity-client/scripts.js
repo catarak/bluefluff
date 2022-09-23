@@ -1,5 +1,8 @@
 const { EditorView, basicSetup } = window.CM.codemirror;
 const { javascript } = window.CM["@codemirror/lang-javascript"];
+const { markdown } = window.CM["@codemirror/lang-markdown"];
+const { html } = window.CM["@codemirror/lang-html"];
+const { css } = window.CM["@codemirror/lang-css"];
 const { EditorState, StateEffect, StateField, EditorSelection } = window.CM["@codemirror/state"];
 const { oneDark } = window.CM['@codemirror/theme-one-dark'];
 const { Range, Decoration } = window.CM["@codemirror/view"];
@@ -12,11 +15,58 @@ let controlPanel = null;
 let editorView = null;
 let actionIndex = 1;
 let furbyInterval = null;
+const NUM_ACTIONS = 1568;
+
+let serverUrl = "http://localhost:3872";
+const actionPath = "/cmd/action";
+// post with params: {"params":{"input":"1","index":"1","subindex":"1","specific":"1"}}:
+const debugPath = "/cmd/debug"
+
+// Example POST method implementation:
+async function postData(url = '', data = {}) {
+	// Default options are marked with *
+	const response = await fetch(url, {
+		method: 'POST', // *GET, POST, PUT, DELETE, etc.
+		mode: 'cors', // no-cors, *cors, same-origin
+		cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+		credentials: 'same-origin', // include, *same-origin, omit
+		// headers: {
+		// 	'Content-Type': 'application/json'
+		// 	// 'Content-Type': 'application/x-www-form-urlencoded',
+		// },
+		redirect: 'follow', // manual, *follow, error
+		referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+		body: JSON.stringify(data) // body data type must match "Content-Type" header
+	});
+	return response.json(); // parses JSON response into native JavaScript objects
+}
+
+function sendAction(index) {
+	const action = actionList[index]
+	const params = {
+		input: action.Input,
+		index: action.Index,
+		subindex: action.SubIndex,
+		specific: action.specific
+	}
+	postData(`${serverUrl}${actionPath}`, { params }).catch((e) => {
+		console.log(e);
+	});
+}
+
+function sendDebug() {
+	const params = {};
+	postData(`${serverUrl}${debugPath}`, { params }).catch((e) => {
+		console.log(e);
+	});
+}
 
 function startFurby() {
 	actionIndex = 1;
+	sendDebug();
 	furbyInterval = setInterval(() => {
 		scrollToLine(actionIndex);
+		sendAction(actionIndex - 1);
 		actionIndex += 1;
 	}, 1000);
 }
@@ -70,7 +120,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 	
 	const initialContent = "";
 	const editorContent = actionList.reduce(
-		(previousValue, currentValue) => previousValue + currentValue.Action + "\n",
+		(previousValue, currentValue) => previousValue + currentValue.text + "\n",
 		initialContent
 	);
 
@@ -114,7 +164,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 	editorView = new EditorView({
 		doc: editorContent,
-		extensions: [basicSetup, javascript(), EditorState.readOnly.of(true), oneDark, changeFontSize],
+		extensions: [basicSetup, css(), EditorState.readOnly.of(true), oneDark, changeFontSize],
 		parent: editorContainer
 	});
 

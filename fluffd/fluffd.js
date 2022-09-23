@@ -26,6 +26,7 @@ const http = require("http");
 // Project
 const fluffaction = require("./fluffaction");
 const fluffcon = require("./fluffcon");
+const { disconnect } = require("process");
 
 // List of connected Furby Connects
 let furbies = {};
@@ -60,6 +61,7 @@ function startCommand(name, post_data, res) {
 			fluffaction.execute(furbies[uuid], name, post_data.params, respond_single);
 
 		// Send command to a single one of the connected furbies
+		respond(false);
 	} else {
 		winston.verbose("Sending " + name + " command to single Furby " + post_data.target + ", params: " + post_data.params);
 
@@ -123,7 +125,7 @@ http.createServer(function (req, res) {
 /*** noBLE Callbacks ***/
 noble.on("stateChange", function (state) {
 	if (state === "poweredOn") {
-		noble.startScanning();
+		noble.startScanning([], false);
 	} else {
 		noble.stopScanning();
 	}
@@ -143,5 +145,34 @@ noble.on("discover", function(peripheral) {
 		fluffcon.connect(peripheral, function (fluff) {
 			furbies[peripheral.uuid] = fluff;
 		});
+		noble.stopScanning();
+
+		peripheral.once('disconnect', function () {
+			console.log('disconnected');
+			delete furbies[peripheral.uuid];
+			peripheral.removeAllListeners('servicesDiscover');
+			peripheral.removeAllListeners('connect');
+			peripheral.removeAllListeners('disconnect');
+			noble.startScanning([], false);
+		});
 	}
+});
+
+noble.on("warning", function (message) {
+	console.log(message);
+});
+
+process.on('SIGINT', function () {
+	console.log('Caught interrupt signal');
+	noble.stopScanning(() => process.exit());
+});
+
+process.on('SIGQUIT', function () {
+	console.log('Caught interrupt signal');
+	noble.stopScanning(() => process.exit());
+});
+
+process.on('SIGTERM', function () {
+	console.log('Caught interrupt signal');
+	noble.stopScanning(() => process.exit());
 });

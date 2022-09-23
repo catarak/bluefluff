@@ -7,7 +7,6 @@
 |1|0|0|4|"Nom nom nom, wooo!"|
 |1|0|0|5|"Oooh, itchy itchy scratchy scratchy!"|
 |1|0|0|6|"oh oh oh oh oh ee-tay!"|
-|1|0|0|7|"aaaah, kah feel like a hot dog in a bun"|
 |1|0|0|8|"aaaah, crazy, hold me maybe"|
 |1|0|1|0|"oh ah oh oh ooooh"|
 |1|0|1|1|"gaah (whispering) eugh!"|
@@ -15,7 +14,6 @@
 |1|0|1|3|"ooh, ep ep oooh, ep ep ep oooh"|
 |1|0|1|4|"who give best pet? oo-nye give best pet"|
 |1|0|1|5|"you like? Is all natural!"|
-|1|0|1|6|"aah, kah feel like a hot dog in a bun, mmm."|
 |1|0|1|7|"aaaah, crazy, hold me maybe"|
 |1|1|0|0|"kah woo-bye kah-tay"|
 |1|1|0|1|"doh, really?"|
@@ -42,7 +40,7 @@
 |1|2|1|5|sigh"|
 |1|3|0|0|"hm, that the spot"|
 |1|3|0|1|"oouuughhh"|
-|1|3|0|2|humming"|
+|1|3|0|2|humming|
 |1|3|0|3|sing "lovely lovely love ly"|
 |1|3|0|4|"oooh, kah doh noo-loo"|
 |1|3|0|5|"awww, besties"|
@@ -100,47 +98,47 @@
 |2|3|0|9|laugh, gefaw "woah"|
 |2|3|0|10|laugh "cold hands, but warm heart" giggle|
 |2|3|0|11|laugh "touch belly, very tickle"|
-|3, 4|0|0|0|laughing, antenna blink|
-|3, 4|0|0|1|laughing "cramp, cramp!"|
-|3, 4|0|0|2|laughing, fart "oops!" laughing|
-|3, 4|0|0|3|"sqeeeee" laughing|
-|3, 4|0|0|4|laughing "eee-tay!"|
-|3, 4|0|0|5|laughing, burp|
-|3, 4|0|0|6|laughing "boo, kah (furbish?)"|
-|3, 4|0|1|0|"kah totally not tickleish," giggle "no!"|
-|3, 4|0|1|1|laugh, fart "who did that?" evil laugh|
-|3, 4|0|1|2|out of breath laughter|
-|3, 4|0|1|3|"oooh," mischevious laugh|
-|3, 4|0|1|4|laugh "ohhh?!?"|
-|3, 4|1|0|0|whining|
-|3, 4|1|0|1|"uuugh.. Why kah!!"|
-|3, 4|1|0|2|whimper "|
-|3, 4|1|0|3|"eeeh, kah giblets!"|
-|3, 4|1|0|4|gargle "meh!"|
-|3, 4|1|0|5|"woob woob woob woob woob woob weh"|
-|3, 4|1|0|6|"ugh!" mumbles|
-|3, 4|2|0|0|snoring "doo? Oh, hi!"|
-|3, 4|2|0|1|sleep murmer "cheese fries"|
-|3, 4|2|0|2|"do do do" yawn|
-|3, 4|2|0|3|"doh nee-may" yawn|
-|3, 4|2|0|4|yawn "fuzzy wuzzy" snore|
-|3, 4|2|0|5|yawn, gargle|
-|3, 4|2|0|6|yawn "oh yeah" fart|
-|3, 4|2|0|7|yawn "hmmmm"|
-|3, 4|3|0|0|"mmm. ee-tay, this is appropriate"|
-|3, 4|3|0|1|giggle "kah love handles"|
-|3, 4|3|0|2|purr "smoosh"|
-|3, 4|3|0|3|purr|
-|3, 4|3|0|4|purr "mee-mee noo-noo"|
-|3, 4|3|0|5|sigh|
-|3, 4|3|0|6|"noo-noo loo-loo joy joy"|
-|3, 4|3|0|7|giggle "oo-nye, yes, you"|
-|3, 4|3|0|8|"ee-tay, fantastico!"|
-|3, 4|3|0|9|"oooh, oo-nye magic"|
-|3, 4|3|0|10|"uh, oo-nye, toh kah"|
-|3, 4|3|0|11|"oooh, kah take it easy" long fart|
-|3, 4|3|0|12|"aah, deep tissue"|
-|3, 4|3|0|13|"ooh, kah feel good"|
+|3|0|0|0|laughing, antenna blink|
+|3|0|0|1|laughing "cramp, cramp!"|
+|3|0|0|2|laughing, fart "oops!" laughing|
+|3|0|0|3|"sqeeeee" laughing|
+|3|0|0|4|laughing "eee-tay!"|
+|3|0|0|5|laughing, burp|
+|3|0|0|6|laughing "boo, kah (furbish?)"|
+|3|0|1|0|"kah totally not tickleish," giggle "no!"|
+|3|0|1|1|laugh, fart "who did that?" evil laugh|
+|3|0|1|2|out of breath laughter|
+|3|0|1|3|"oooh," mischevious laugh|
+|3|0|1|4|laugh "ohhh?!?"|
+|3|1|0|0|whining|
+|3|1|0|1|"uuugh.. Why kah!!"|
+|3|1|0|2|whimper|
+|3|1|0|3|"eeeh, kah giblets!"|
+|3|1|0|4|gargle "meh!"|
+|3|1|0|5|"woob woob woob woob woob woob weh"|
+|3|1|0|6|"ugh!" mumbles|
+|3|2|0|0|snoring "doo? Oh, hi!"|
+|3|2|0|1|sleep murmur "cheese fries"|
+|3|2|0|2|"do do do" yawn|
+|3|2|0|3|"doh nee-may" yawn|
+|3|2|0|4|yawn "fuzzy wuzzy" snore|
+|3|2|0|5|yawn, gargle|
+|3|2|0|6|yawn "oh yeah" fart|
+|3|2|0|7|yawn "hmmmm"|
+|3|3|0|0|"mmm. ee-tay, this is appropriate"|
+|3|3|0|1|giggle "kah love handles"|
+|3|3|0|2|purr "smoosh"|
+|3|3|0|3|purr|
+|3|3|0|4|purr "mee-mee noo-noo"|
+|3|3|0|5|sigh|
+|3|3|0|6|"noo-noo loo-loo joy joy"|
+|3|3|0|7|giggle "oo-nye, yes, you"|
+|3|3|0|8|"ee-tay, fantastico!"|
+|3|3|0|9|"oooh, oo-nye magic"|
+|3|3|0|10|"uh, oo-nye, toh kah"|
+|3|3|0|11|"oooh, kah take it easy" long fart|
+|3|3|0|12|"aah, deep tissue"|
+|3|3|0|13|"ooh, kah feel good"|
 |5|0|0|0|trumpet "oh kah furb!"|
 |5|0|0|1|"oh uh uh uh uh ooh"|
 |5|0|0|2|"eeeehhhehehehhe"|
@@ -626,7 +624,14 @@
 |24|6|0|1|yawn "sheepses|
 |24|6|0|2|yawn "k, k, kah way, kah way, not!"|
 |24|6|0|3|yawn "kah way way-loh toh-toh nee-way, huh?"|
-|24|7|0|0 - 7|Sighs and Yawns|
+|24|7|0|0|sigh|
+|24|7|0|1|yawn sigh|
+|24|7|0|2|yawn|
+|24|7|0|3|yawn|
+|24|7|0|4|yawn|
+|24|7|0|5|sigh|
+|24|7|0|6|yawn|
+|24|7|0|7|yawn|
 |25|0|0|0|yawn, fart "ah may, pet please?"|
 |25|0|0|1|"ooh, belly wubs?"|
 |25|0|0|2|"rock a bye furby!"|
@@ -730,7 +735,22 @@
 |30|1|1|21|"mmm, mmhmm, yep yep yep yep"|
 |30|1|1|22|"oh yeah no totally, mmhm"|
 |30|1|1|23|"mmhm, totally"|
-|30|2|0 - 3|0 - 3|duet singing|
+|30|2|0|0|duet singing|
+|30|2|0|1|duet singing|
+|30|2|0|2|duet singing|
+|30|2|0|3|duet singing|
+|30|2|1|0|duet singing|
+|30|2|1|1|duet singing|
+|30|2|1|2|duet singing|
+|30|2|1|3|duet singing|
+|30|2|2|0|duet singing|
+|30|2|2|1|duet singing|
+|30|2|2|2|duet singing|
+|30|2|2|3|duet singing|
+|30|2|3|0|duet singing|
+|30|2|3|1|duet singing|
+|30|2|3|2|duet singing|
+|30|2|3|3|duet singing|
 |30|3|0|0|PUT TO SLEEP|
 |32|0|0|0|"love it!"|
 |32|0|0|1|"so in to this!"|
@@ -915,11 +935,11 @@
 |37|0|1|1|"oooh, what's going on?!"|
 |37|0|1|2|"hah, kah noo-loo place"|
 |37|0|1|3|yodeling|
-|37|0|2,3|0|"ok, alright, yeah, let's do this!"|
-|37|0|2,3|1|"kah ready to go!"|
-|37|0|2,3|2|"let's get party started, ugh"|
-|37|0|2,3|3|"can't wait, can't wait, can't wait!"|
-|37|0|2,3|4|"come on, let's get started"|
+|37|0|2|0|"ok, alright, yeah, let's do this!"|
+|37|0|2|1|"kah ready to go!"|
+|37|0|2|2|"let's get party started, ugh"|
+|37|0|2|3|"can't wait, can't wait, can't wait!"|
+|37|0|2|4|"come on, let's get started"|
 |37|0|4|0|"hey, egg! Where oo-nye at?"|
 |37|0|4|1|"let's go to egg"|
 |37|0|5|0|"gimmie gimmie gimmie"|
@@ -933,16 +953,15 @@
 |37|1|0|3|"do, really?"|
 |37|1|0|4|whimpering|
 |37|1|0|5|"mm, why so soon?"|
-|37|1|1,2|0|"bye bye for now"|
-|37|1|1,2|1|"peace out noo-lah"|
-|37|1|1,2|2|"see ya later furbinator"|
-|37|1|1,2|3|"oh kay, hasta la bye bye"|
-|37|1|1,2|4|"later little dee-doh"|
-|38|x|x|x|repeats elsewhere|
-|39|0|0,2|0|"Oooh, look"|
-|39|0|0,2|1|"Oooh, check it out noo-lah"|
-|39|0|0,2|2|"Would ya look at that?"|
-|39|0|0,2|3|"Looky looky look look"|
+|37|1|1|0|"bye bye for now"|
+|37|1|1|1|"peace out noo-lah"|
+|37|1|1|2|"see ya later furbinator"|
+|37|1|1|3|"oh kay, hasta la bye bye"|
+|37|1|1|4|"later little dee-doh"|
+|39|0|0|0|"Oooh, look"|
+|39|0|0|1|"Oooh, check it out noo-lah"|
+|39|0|0|2|"Would ya look at that?"|
+|39|0|0|3|"Looky looky look look"|
 |39|0|1|0|"gimme, gimme, gimme"|
 |39|0|1|1|"best news evahhh"|
 |39|0|1|2|"oooh, dah-boo dah-boo no way"|
@@ -971,11 +990,11 @@
 |39|1|7|0|"ooh, so warm, like waaarm"|
 |39|1|7|1|"oooh, warm fuzzies"|
 |39|1|7|2|"so snug, so cozy, so snoozy"|
-|39|1|8,11|0|"errrrgh, smooth"|
-|39|1|8,11|1|"haaaa, squish"|
-|39|1|8,11|2|"muhoooo, kah favorite"|
-|39|1|8,11|3|"ooh, oo-nye cutesy whoopsy shmootsy"|
-|39|1|8,11|4|"hmm, rock a by furby, dee do"|
+|39|1|8|0|"errrrgh, smooth"|
+|39|1|8|1|"haaaa, squish"|
+|39|1|8|2|"muhoooo, kah favorite"|
+|39|1|8|3|"ooh, oo-nye cutesy whoopsy shmootsy"|
+|39|1|8|4|"hmm, rock a by furby, dee do"|
 |39|1|9|0|"ee-tay, good job!"|
 |39|1|9|1|"ee-tay, fantastico!"|
 |39|1|9|2|"sweet mother of furb"|
@@ -1089,7 +1108,6 @@
 |40|0|1|2|"yes, yes, Thank you, thank you, thank you yes"|
 |40|0|1|3|"ooh, ooh, all the yes"|
 |40|0|1|4|stars in eyes, "for kah? It's beautiful"|
-|40|0|1|4|stars in eyes, "for kah? It's beautiful"|
 |41|0|0|0|"Weee diiid it!"|
 |41|0|0|1|"ha, ha! Take that!"|
 |41|0|0|2|"hoho, we good, aww yeah"|
@@ -1112,11 +1130,11 @@
 |42|0|1|2|"oooh, new stuffseses"|
 |42|0|1|3|"oooh, new things, noolah"|
 |42|0|1|4|"oooh, new mission"|
-|42|0|2,3|0|"hey, help a furb out"|
-|42|0|2,3|1|"furbling need help, kah to the rescue"|
-|42|0|2,3|2|"look, little dee-doh need help"|
-|42|0|2,3|3|"lets give little guy a hand"|
-|42|0|2,3|4|"we help, us to the rescue"|
+|42|0|2|0|"hey, help a furb out"|
+|42|0|2|1|"furbling need help, kah to the rescue"|
+|42|0|2|2|"look, little dee-doh need help"|
+|42|0|2|3|"lets give little guy a hand"|
+|42|0|2|4|"we help, us to the rescue"|
 |42|0|4|0|"ok, alright yeah, let's do this!"|
 |42|0|4|1|"ka, ready to go!"|
 |42|0|4|2|"let's get party started, uh"|
@@ -1180,14 +1198,14 @@
 |44|0|2|3|"oooh, new stuffseses"|
 |44|0|2|4|"oooh, new things noo-lah"|
 |44|0|2|5|"look, new video"|
-|44|1,2|0|0|"oooh, ahhh"|
-|44|1,2|0|1|"kah all like Whaaat?!"|
-|44|1,2|0|2|"whoah!"|
-|44|1,2|0|3|"hmmmm"|
-|44|1,2|0|4|"oooh!"|
-|44|1,2|0|5|"hey!"|
-|44|1,2|0|6|"hooo, oh kah furb"|
-|44|1,2|0|7|"oooh, ah, oooh, oooh, oooh"|
+|44|1|0|0|"oooh, ahhh"|
+|44|1|0|1|"kah all like Whaaat?!"|
+|44|1|0|2|"whoah!"|
+|44|1|0|3|"hmmmm"|
+|44|1|0|4|"oooh!"|
+|44|1|0|5|"hey!"|
+|44|1|0|6|"hooo, oh kah furb"|
+|44|1|0|7|"oooh, ah, oooh, oooh, oooh"|
 |44|1|1|0|"wooohoohoo, showtime"|
 |44|1|1|1|"oooh, dis gonna be good"|
 |44|1|1|2|"huh, whoah, whoah, whoah"|
@@ -1221,11 +1239,21 @@
 |45|0|1|3|"Hmmm, what have we have here"|
 |45|0|1|4|"Oooh, very interesting"|
 |45|0|1|5|"Hmm."|
-|45|0|2,3|0-10|various laughs (5&7 fart)|
-|45|0|4,5|0|"Ohh, look!"|
-|45|0|4,5|1|"ooh, check it out noo-lah"|
-|45|0|4,5|2|"Would you look at that"|
-|45|0|4,5|3|"Looky looky look look"|
+|45|0|2|0|laugh|
+|45|0|2|1|laugh|
+|45|0|2|2|laugh|
+|45|0|2|3|laugh|
+|45|0|2|4|laugh|
+|45|0|2|5|laugh, farts, "oops"|
+|45|0|2|6|laugh|
+|45|0|2|7|laugh, farts, "augh, oops" maniacal laughter|
+|45|0|2|8|laugh, out of breath|
+|45|0|2|9|laugh|
+|45|0|2|10|laugh|
+|45|0|4|0|"Ohh, look!"|
+|45|0|4|1|"ooh, check it out noo-lah"|
+|45|0|4|2|"Would you look at that"|
+|45|0|4|3|"Looky looky look look"|
 |45|0|4|4|"alright, ok, uh huh, not bad"|
 |45|0|4|5|"show kah what ya got"|
 |45|0|6|0|"Hey Hey, it's kah buddy"|
@@ -1247,24 +1275,24 @@
 |46|0|1|2|"poke, pooke it, poke it"|
 |46|0|1|3|"ohh, what that? Touch it, Go on..."|
 |46|0|1|4|"ohh, pokey, pokey..."|
-|46|0|2,3,4|0|"can't resist, must touch!"|
-|46|0|2,3,4|1|"poke, pooke it, poke it"|
-|46|0|2,3,4|2|"ohh, what that? Touch it, Go on..."|
-|46|0|2,3,4|3|"ohh, pokey, pokey..."|
-|46|0|5,6|0|"ohh, the cuteness!"|
-|46|0|5,6|1|"ohh, didj didj awwww....!"|
-|46|0|5,6|2|"ohh, pet pet, hug hug, squeeze, squeeze"|
-|46|0|5,6|3|"hehehe, oo-nye soo cuute"|
-|46|0|5,6|4|"dooohhhh."|
-|46|0|5,6|5|"can't resist, must touch!"|
-|46|0|5,6|6|"poke, pooke it, poke it"|
-|46|0|5,6|7|"ohh, what that? Touch it, Go on..."|
-|46|0|5,6|8|"ohh, pokey, pokey..."|
+|46|0|2|0|"can't resist, must touch!"|
+|46|0|2|1|"poke, pooke it, poke it"|
+|46|0|2|2|"ohh, what that? Touch it, Go on..."|
+|46|0|2|3|"ohh, pokey, pokey..."|
+|46|0|5|0|"ohh, the cuteness!"|
+|46|0|5|1|"ohh, didj didj awwww....!"|
+|46|0|5|2|"ohh, pet pet, hug hug, squeeze, squeeze"|
+|46|0|5|3|"hehehe, oo-nye soo cuute"|
+|46|0|5|4|"dooohhhh."|
+|46|0|5|5|"can't resist, must touch!"|
+|46|0|5|6|"poke, pooke it, poke it"|
+|46|0|5|7|"ohh, what that? Touch it, Go on..."|
+|46|0|5|8|"ohh, pokey, pokey..."|
 |46|0|7|0|giggle|
-|47|0|0,1|0|"Hmmm, let's see..."|
-|47|0|0,1|1|"Hmmm, what have we have here"|
-|47|0|0,1|2|"Oooh, very interesting"|
-|47|0|0,1|3|"Hmm."|
+|47|0|0|0|"Hmmm, let's see..."|
+|47|0|0|1|"Hmmm, what have we have here"|
+|47|0|0|2|"Oooh, very interesting"|
+|47|0|0|3|"Hmm."|
 |47|0|2|0|"kah love it" hearts in eyes|
 |47|0|2|1|"Like it? No, kah love it!" hearts|
 |47|0|2|2|"oooh, kah likey"|
@@ -1286,10 +1314,10 @@
 |48|0|1|0|"oooh, what inside? "|
 |48|0|1|1|"open sesame"|
 |48|0|1|2|"what inside? kah need to know, need to know"|
-|48|0|2,4|0|"ooh, so rare, so precious, awww"|
-|48|0|2,4|1|"ooh, quality stuffs"|
-|48|0|2,4|2|"ooh, super rare, super fancy"|
-|48|0|2,4|3|"ooh, extra super very special"|
+|48|0|2|0|"ooh, so rare, so precious, awww"|
+|48|0|2|1|"ooh, quality stuffs"|
+|48|0|2|2|"ooh, super rare, super fancy"|
+|48|0|2|3|"ooh, extra super very special"|
 |48|0|3|0|"ooh, wow, just wow"|
 |48|0|3|1|"Legendary!"|
 |48|0|3|2|"the stuff of legends!"|
@@ -1297,15 +1325,15 @@
 |49|0|1|0|"ok, now hatch! Come on"|
 |49|0|2|0|"oy, too much stuff!"|
 |49|0|3|0|"need more space"|
-|50,52|0|0,1|0|"eeetay, good job!"|
-|50,52|0|0,1|1|rainbows in eyes, "ee-tay, fantastico!"|
-|50,52|0|0,1|2|"Sweet mother of Furb!"|
-|50,52|0|0,1|3|Ooh, wow, gimme all the may-may""|
-|50,52|0|0,1|4|"Oh, Kah love it"|
-|50,52|0|0,1|5|"ooh, kay likey"|
-|50,52|0|0,1|6|"Ooh ya, kah need this"|
-|50,52|0|0,1|7|"yay! oh ah ooh ooh"|
-|50,52|0|0,1|8|"Wow, we unstoppable"|
+|50|0|0|0|"eeetay, good job!"|
+|50|0|0|1|rainbows in eyes, "ee-tay, fantastico!"|
+|50|0|0|2|"Sweet mother of Furb!"|
+|50|0|0|3|"Ooh, wow, gimme all the may-may"|
+|50|0|0|4|"Oh, Kah love it"|
+|50|0|0|5|"ooh, kay likey"|
+|50|0|0|6|"Ooh ya, kah need this"|
+|50|0|0|7|"yay! oh ah ooh ooh"|
+|50|0|0|8|"Wow, we unstoppable"|
 |51|0|0|0|"yay! more room for " squeek, giggle|
 |51|0|0|1|"We gonna needa bigger furb!"|
 |52|0|2|0|"oooh, for ka? oo-nye shouldn't have"|
@@ -1514,7 +1542,7 @@
 |60|2|0|1|"legendary!"|
 |60|2|0|2|"the stuff of legends"|
 |61|0|0|0|"ooh, that one look tricky"|
-|62|0|0|0,1|"ooh, that one look tricky"|
+|62|0|0|0|"ooh, that one look tricky"|
 |63|0|0|0|can't resist, must touch!|
 |63|0|0|1|"poke, pooke it, poke it"|
 |63|0|0|2|"ohh, what that? Touch it, Go on…"|
