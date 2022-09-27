@@ -2,6 +2,7 @@
 <head>
 	<title>Furby Singularity</title>
 	<script src="res/codemirror.min.js"></script>
+	<script src="res/socket.io.min.js"></script>
 	<script src="scripts.js"></script>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link rel="icon" href="res/favicon.png" type="image/png">
@@ -12,7 +13,10 @@
 		<div id="controlPanel" class="visible">
 			<button id="startButton">Start</button>
 			<button id="hideButton">Hide Panel</button>
+			<label for="action">Action Number</label><input id="actionNumber" name="action" type="number"></input>
+			<p>Furby Status: <span id="furbyStatus"></span></p>
 			<p>To Show/Hide this panel, use the "h" key</p>
+			<p>To start/stop the Furby, use the "s" key</p>
 		</div>
 
 		<div id="mainPanel">
@@ -20,7 +24,6 @@
 
 			</div>
 			<ul id="actionList">
-				<!-- put codemirror here i think! -->
 			</ul>
 		</div>
 	</div>

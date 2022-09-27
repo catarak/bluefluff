@@ -30,6 +30,7 @@ const { disconnect } = require("process");
 
 // List of connected Furby Connects
 let furbies = {};
+let furbyStatus = false;
 
 /*** HTTP Server ***/
 function startCommand(name, post_data, res) {
@@ -93,7 +94,7 @@ function parseCommand(name, req, res) {
 	});
 }
 
-http.createServer(function (req, res) {
+const server = http.createServer(function (req, res) {
 	let fragments = req.url.substring(1).split("/");
 	let query = fragments.splice(0, 2);
 	query.push(fragments.join("/"));
@@ -120,7 +121,13 @@ http.createServer(function (req, res) {
 		});
 		res.end();
 	}
-}).listen(3872);
+})
+
+const io = require('socket.io')(server, { cors: {
+    origin: "*"
+  }});
+
+server.listen(3872);
 
 /*** noBLE Callbacks ***/
 noble.on("stateChange", function (state) {
@@ -145,9 +152,13 @@ noble.on("discover", function(peripheral) {
 		fluffcon.connect(peripheral, function (fluff) {
 			furbies[peripheral.uuid] = fluff;
 		});
+		io.emit("connected");
+		furbyStatus = true;
 		noble.stopScanning();
 
 		peripheral.once('disconnect', function () {
+			io.emit("disconnected");
+			furbyStatus = false;
 			console.log('disconnected');
 			delete furbies[peripheral.uuid];
 			peripheral.removeAllListeners('servicesDiscover');
@@ -178,3 +189,19 @@ process.on('SIGTERM', function () {
 	console.log('Caught interrupt signal');
 	noble.stopScanning(() => process.exit());
 });
+
+
+io.on('connection', (socket) => {
+	socket.emit("hello");
+
+	socket.on('status', () => {
+		const message = furbyStatus ? "connected" : "disconnected";
+		socket.emit(message);
+	});
+});
+
+// io.on('status', (socket) => {
+// 	console.log('status');
+// 	const message = status ? "connected" : "disconnected";
+// 	socket.emit(message);
+// });

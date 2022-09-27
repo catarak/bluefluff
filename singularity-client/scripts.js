@@ -12,10 +12,16 @@ let currentAction = 0;
 let playing = false;
 let controlPanelVisible = true;
 let controlPanel = null;
+let hideButton = null;
+let startButton = null;
 let editorView = null;
-let actionIndex = 1;
+let actionIndex = 736;
 let furbyInterval = null;
-const NUM_ACTIONS = 1598;
+const NUM_ACTIONS = 1596;
+let furbyStatus;
+let actionNumber = null;
+
+const socket = io("http://localhost:3872");
 
 let serverUrl = "http://localhost:3872";
 const actionPath = "/cmd/action";
@@ -61,8 +67,18 @@ function sendDebug() {
 	});
 }
 
+function toggleFurby() {
+	if(!playing) {
+		startFurby();
+	} else {
+		stopFurby();
+	}
+}
+
 function startFurby() {
-	actionIndex = 736;
+	startButton.textContent = "Stop";
+	playing = true;
+	actionIndex = parseInt(actionNumber.value);
 	sendDebug();
 	furbyInterval = setInterval(() => {
 		scrollToLine(actionIndex);
@@ -75,31 +91,27 @@ function startFurby() {
 }
 
 function stopFurby() {
+	startButton.textContent = "Start";
+	playing = false;
 	clearInterval(furbyInterval);
+	furbyInterval = null;
 }
 
-function handleClickPlay(e) {
-	const button = e.target;
-	if (!playing) {
-		button.textContent = "Stop";
-		playing = true;
-		startFurby();
+function toggleControlPanel() {
+	if (controlPanelVisible) {
+		controlPanelVisible = false;
+		controlPanel.classList.remove("visible");
 	} else {
-		button.textContent = "Start";
-		playing = false;
-		stopFurby();
+		controlPanelVisible = true;
+		controlPanel.classList.add("visible");
 	}
 }
 
 function handleKeyDown(e) {
 	if (e.key === "h") {
-		if (controlPanelVisible) {
-			controlPanelVisible = false;
-			controlPanel.classList.remove("visible");
-		} else {
-			controlPanelVisible = true;
-			controlPanel.classList.add("visible");
-		}
+		toggleControlPanel();
+	} else if (e.key === "s") {
+		toggleFurby();
 	}
 }
 
@@ -128,10 +140,19 @@ document.addEventListener('DOMContentLoaded', async function () {
 	);
 
 	
-	const startButton = document.getElementById("startButton");
-	startButton.addEventListener("click", handleClickPlay);
+	startButton = document.getElementById("startButton");
+	startButton.addEventListener("click", toggleFurby);
+
 	controlPanel = document.getElementById("controlPanel");
 	const editorContainer = document.getElementById("codePanel");
+
+	hideButton = document.getElementById("hideButton");
+	hideButton.addEventListener("click", toggleControlPanel);
+
+	furbyStatus = document.getElementById("furbyStatus");
+
+	actionNumber = document.getElementById("actionNumber")
+	actionNumber.value = actionIndex;
 
 	// const addMarks = StateEffect.define();
 	// const filterMarks = StateEffect.define();
@@ -170,14 +191,24 @@ document.addEventListener('DOMContentLoaded', async function () {
 		extensions: [basicSetup, css(), EditorState.readOnly.of(true), oneDark, changeFontSize],
 		parent: editorContainer
 	});
-
-	setTimeout(() => {
-		scrollToLine(1)
-	}, 6000);
-
 	
-
 }, false);
 
 document.addEventListener("keydown", handleKeyDown);
+
+socket.on('connected', () => {
+	console.log('furby connected');
+	furbyStatus.textContent = "Connected";
+});
+
+socket.on('disconnected', () => {
+	console.log('furby disconnected');
+	furbyStatus.textContent = "Disconnected";
+});	
+
+socket.on('hello', () => {
+	console.log('hello');
+	socket.emit('status');
+});	
+
 
