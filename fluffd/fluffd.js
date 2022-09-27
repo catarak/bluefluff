@@ -61,7 +61,7 @@ function startCommand(name, post_data, res) {
 			fluffaction.execute(furbies[uuid], name, post_data.params, respond_single);
 
 		// Send command to a single one of the connected furbies
-		respond(false);
+		//respond(false);
 	} else {
 		winston.verbose("Sending " + name + " command to single Furby " + post_data.target + ", params: " + post_data.params);
 
@@ -160,6 +160,8 @@ noble.on("discover", function(peripheral) {
 
 noble.on("warning", function (message) {
 	console.log(message);
+	noble.stopScanning();
+	noble.startScanning([], false);
 });
 
 process.on('SIGINT', function () {

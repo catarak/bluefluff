@@ -15,7 +15,7 @@ let controlPanel = null;
 let editorView = null;
 let actionIndex = 1;
 let furbyInterval = null;
-const NUM_ACTIONS = 1568;
+const NUM_ACTIONS = 1598;
 
 let serverUrl = "http://localhost:3872";
 const actionPath = "/cmd/action";
@@ -62,13 +62,16 @@ function sendDebug() {
 }
 
 function startFurby() {
-	actionIndex = 1;
+	actionIndex = 736;
 	sendDebug();
 	furbyInterval = setInterval(() => {
 		scrollToLine(actionIndex);
 		sendAction(actionIndex - 1);
 		actionIndex += 1;
-	}, 1000);
+		if (actionIndex > NUM_ACTIONS) {
+			actionIndex = 1;
+		}
+	}, 5000);
 }
 
 function stopFurby() {
@@ -152,7 +155,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 	const changeFontSize = EditorView.theme({
 		"&": {
-			fontSize: "20pt",
+			fontSize: "25pt",
 		},
 		".cm-line.cm-activeLine": {
 			backgroundColor: "#424757"
@@ -170,7 +173,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 	setTimeout(() => {
 		scrollToLine(1)
-	}, 5000);
+	}, 6000);
 
 	
 

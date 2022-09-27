@@ -5,12 +5,15 @@
 	"main": "fluffd.js",
 	"scripts": {
 		"start:client": "http-server ../singularity-client",
-		"start:server": "node fluffd.js"
+		"start:server": "pm2 start fluffd.js --no-daemon",
+		"start": "concurrently \"npm run start:server\" \"npm run start:client\""
 	},
 	"dependencies": {
 		"@abandonware/noble": "^1.9.2-15",
+		"concurrently": "^7.4.0",
 		"http-server": "^14.1.1",
 		"parse-markdown-table": "^0.0.6",
+		"pm2": "^5.2.0",
 		"winston": "3.1.0"
 	},
 	"devDependencies": {
