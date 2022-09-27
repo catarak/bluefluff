@@ -40,6 +40,7 @@ function exitHandler(furby) {
 // Get GATT characterstic matching serviceUUID and characteristicUUID from furby peripheral.
 // callback is a function(characteristic), where characteristic is a noBLE characteristic.
 function getFurbyCharacteristics(furby, serviceUUID, characteristicUUIDs, callback) {
+	console.log("in get characteristics");
 	furby.discoverServices([serviceUUID], function (error, services) {
 		if (error) {
 			winston.error("Error in discoverServices: " + error);

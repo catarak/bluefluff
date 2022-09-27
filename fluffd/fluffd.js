@@ -149,16 +149,19 @@ noble.on("discover", function(peripheral) {
 		}
 
 		// Normal server mode
+		noble.stopScanning();
+		let myFluff = null;
 		fluffcon.connect(peripheral, function (fluff) {
+			myFluff = fluff;
 			furbies[peripheral.uuid] = fluff;
 		});
 		io.emit("connected");
 		furbyStatus = true;
-		noble.stopScanning();
 
 		peripheral.once('disconnect', function () {
 			io.emit("disconnected");
 			furbyStatus = false;
+			myFluff.stopIdle();
 			console.log('disconnected');
 			delete furbies[peripheral.uuid];
 			peripheral.removeAllListeners('servicesDiscover');
@@ -170,7 +173,11 @@ noble.on("discover", function(peripheral) {
 });
 
 noble.on("warning", function (message) {
+	console.log('in noble warning');
 	console.log(message);
+	delete furbies[peripheral.uuid];
+	furbyStatus = false;
+	noble.reset();
 	noble.stopScanning();
 	noble.startScanning([], false);
 });
