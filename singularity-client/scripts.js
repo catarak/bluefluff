@@ -15,7 +15,7 @@ let controlPanel = null;
 let hideButton = null;
 let startButton = null;
 let editorView = null;
-let actionIndex = 736;
+let actionIndex = 1;
 let furbyInterval = null;
 const NUM_ACTIONS = 1596;
 let furbyStatus;
@@ -33,6 +33,9 @@ async function postData(url = '', data = {}) {
 
 	const controller = new AbortController();
 	const { signal } = controller;
+	setTimeout(() => {
+		controller.abort();
+	}, 6000);
 	// Default options are marked with *
 	const response = await fetch(url, {
 		method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -48,9 +51,6 @@ async function postData(url = '', data = {}) {
 		body: JSON.stringify(data), // body data type must match "Content-Type" header
 		signal: signal
 	});
-	setTimeout(() => {
-		controller.abort();
-	}, 6000);
 	return Promise.resolve(response);
 }
 
@@ -86,7 +86,6 @@ function startFurby() {
 	startButton.textContent = "Stop";
 	playing = true;
 	actionIndex = parseInt(actionNumber.value);
-	sendDebug();
 	furbyInterval = setInterval(() => {
 		scrollToLine(actionIndex);
 		sendAction(actionIndex - 1);
@@ -206,6 +205,9 @@ document.addEventListener("keydown", handleKeyDown);
 socket.on('connected', () => {
 	console.log('furby connected');
 	furbyStatus.textContent = "Connected";
+	setTimeout(() => {
+		sendDebug();
+	}, 6000);
 });
 
 socket.on('disconnected', () => {
